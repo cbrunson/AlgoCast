@@ -13,7 +13,7 @@
 //   buzz
 
 function fizzBuzz(n) {
-
+    console.log("test");
 }
 
 module.exports = fizzBuzz;
