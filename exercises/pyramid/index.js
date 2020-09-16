@@ -14,9 +14,29 @@
 //       ' ### '
 //       '#####'
 
+function getBase(n) {
+    while(true) {
+        if (n % 3 === 0) {
+            return n;
+        } else {
+            n++;
+        } 
+    }
+}
+
 function pyramid(n) {
 
-    
+    const midpoint = Math.floor((2 * n - 1) / 2);
+
+    for (let row = 0; row < n; row++) {
+        let str = "";
+        for (let column = 0; column < (2 * n - 1); column++) {
+            (midpoint - row <= column && midpoint + row >= column) ? str += '#': str += ' ';
+        }
+        console.log(str);
+    }
 }
+
+/* pyramid(8); */
 
 module.exports = pyramid;
